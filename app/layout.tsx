@@ -16,9 +16,6 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Labelling Algo",
   description: "Labelling Algorithm Code Generator Demostation",
-  // icons: {
-  //   icon: '/image.png',
-  // },
 };
 
 export default function RootLayout({
