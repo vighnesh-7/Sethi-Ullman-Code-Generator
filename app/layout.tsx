@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Sethi-Ullman Algo",
-  description: "Sethi-Ullman Code Generator Demostation",
+  title: "Labelling Algo",
+  description: "Labelling Algorithm Code Generator Demostation",
   // icons: {
   //   icon: '/image.png',
   // },
