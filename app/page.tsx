@@ -39,7 +39,7 @@ export default function Home() {
     }
 
     try {
-      const equalNode = { value: '=', left: { value: 'x', left: null, right: null, label: 1 }, right: null, label: 0 }
+      const equalNode: { value: string, left: any, right: any, label: number } = { value: '=', left: { value: 'x', left: null, right: null, label: 1 }, right: null, label: 0 }
       const expressionTree = constructTree(expression)
       equalNode.right = expressionTree 
       const newTree = equalNode
