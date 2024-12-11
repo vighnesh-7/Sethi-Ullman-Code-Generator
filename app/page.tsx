@@ -8,6 +8,7 @@ import { Label } from '@/components/ui/label'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { constructTree, labelTree, generateIntermediateCode, generateObjectCode } from '@/lib/sethi-ullman'
 import TreeVisualization from './components/tree-visualization'
+import { AiOutlineEnter } from "react-icons/ai";
 
 export default function Home() {
   const [expression, setExpression] = useState('')
@@ -64,7 +65,7 @@ export default function Home() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold text-center mb-8">Labelling Algorithm Code Generator</h1>
+      <h1 className="text-4xl font-bold text-center mb-8">Labelling Algorithm Code Generator</h1>
       <div className="mb-4">
         <Label htmlFor="expression " className='font-semibold text-base '>Enter Arithmetic Expression:</Label>
         <div className="flex gap-10 mt-3">
@@ -74,10 +75,10 @@ export default function Home() {
             value={expression}
             onChange={(e) => setExpression(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="e.g., a+b*c-d"
+            placeholder="e.g., a+b*c-d, a+b/d, ..."
             className='border-2 border-gray-300 rounded-md p-2 w-full bg-gray-50 focus:outline-none focus:border-orange-700 focus:ring-4 focus:ring-blue-500 focus:border-transparent  '
           />
-          <Button onClick={processExpression}>Generate Code</Button>
+          <Button className='flex items-center justify-center gap-3 font-semibold' onClick={processExpression}>Generate Code <AiOutlineEnter className='h-7 w-7 font-semibold bg-gray-800/50 m-1' /></Button>
         </div>
       </div>
       <div className="flex justify-center mt-8 p-4">
